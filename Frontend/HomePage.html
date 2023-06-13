@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminde Your Things</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./HomePage.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="navigation">
+            <div class="mobile">
+                <!-- ! Pass for Now -->
+            </div>
+            <div class="desktop">
+                <nav>
+                    <div class="logo">
+                        <ion-icon name="alarm-outline"></ion-icon>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="active" onclick="changeClass(this)">Home</a>
+                        <a href="#" onclick="changeClass(this)">Reminders</a>
+                        <a href="#" onclick="changeClass(this)">Create Reminder</a>
+                        <div class="pointer" onclick="changeClass(this)"></div>
+                    </div>
+                    <div class="user">
+                        J
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="body">
+            <div class="nextReminder">
+                <div>Next Reminder in <span>1Hour 2Min</span></div>
+            </div>
+            <div class="analysis">
+                <div class="content">
+                    <div class="data">
+                        <div class="icon-clock"><ion-icon name="time-outline"></ion-icon></div>
+                        <div style="font-size: 20px; margin-top: 10px;">August 2 Mon</div>
+                        <div style="font-size: 35px;margin-top: 5px;">Today</div>
+                        <div style="font-size: 20px;margin-top: 15px;">Hi Javid Sumra</div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="completed box">
+                        <div class="icon-detail">
+                            <ion-icon name="checkmark-done-outline"></ion-icon>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <div style="font-size: 30px;border-bottom: 1px solid black;text-align: center;">19</div>
+                            <div style="font-size: 20px;">Completed</div>
+                        </div>
+                    </div>
+                    <div class="pending box">
+                        <div class="icon-detail">
+                            <ion-icon name="cloud-upload-outline"></ion-icon>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <div style="font-size: 30px;border-bottom: 1px solid black;text-align: center;">19</div>
+                            <div style="font-size: 20px;">Pending</div>
+                        </div>
+                    </div>
+                    <div class="pinned box">
+                        <div class="icon-detail">
+                            <ion-icon name="pin-outline"></ion-icon>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <div style="font-size: 30px;border-bottom: 1px solid black;text-align: center;">19</div>
+                            <div style="font-size: 20px;">Pinned</div>
+                        </div>
+                    </div>
+                    <div class="pending box">
+                        <div class="icon-detail">
+                            <ion-icon name="today-outline"></ion-icon>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <div style="font-size: 30px;border-bottom: 1px solid black;text-align: center;">19</div>
+                            <div style="font-size: 20px;">Scheduled</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //! Class For Animation in Navbar
+        const changeClass = (elem) => {
+            document.querySelectorAll("a").forEach((element) => {
+                element.classList.remove("active");
+            })
+            elem.classList.add("active")
+        }
+    </script>
+</body>
+
+</html>
